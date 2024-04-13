@@ -15,7 +15,7 @@
 <div id="map"></div>
 
 <script>
-    mapboxgl.accessToken = 'sk.eyJ1IjoiY2llcnJhamVubiIsImEiOiJjbHV5NmIxMzIwMDBrMmpwMjd2ZXkydXdsIn0.XW2c_saKJO4sVD5OGCymeQ';
+    mapboxgl.accessToken = 'sk.eyJ1IjoibGhvbG1lczciLCJhIjoiY2x1eWFhdjdhMHl0OTJrbWpyeDFlMTFkcCJ9.GIdk-6L7b7iCUQg8M2kl7w';
     const apikey = "AEUxBnDkItZMdx6zMs1LrdeGI0uumtGv";
     const map = new mapboxgl.Map({
         container: 'map',
@@ -23,6 +23,8 @@
             version: 8,
             zoom: 12,
             center: [44.478339, -73.197576],
+            source:{},
+            layers:{},
             // sources: {
             //     routes: {
             //         type: 'vector',
