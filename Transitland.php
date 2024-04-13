@@ -9,7 +9,7 @@
 
 <script>
     const urlParams = new URLSearchParams(window.location.search);
-    const apikey = sk.eyJ1IjoiY2llcnJhamVubiIsImEiOiJjbHV5NmIxMzIwMDBrMmpwMjd2ZXkydXdsIn0.XW2c_saKJO4sVD5OGCymeQ;
+    const apikey = "sk.eyJ1IjoiY2llcnJhamVubiIsImEiOiJjbHV5NmIxMzIwMDBrMmpwMjd2ZXkydXdsIn0.XW2c_saKJO4sVD5OGCymeQ";
     const map = new mapboxgl.Map({
         container: 'map',
         style: {
