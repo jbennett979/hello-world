@@ -1,15 +1,15 @@
+<!DOCTYPE html>fix apis
 <html>
-<head>
     <script src="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js"></script>
     <link href="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css" rel="stylesheet" />
-</head>
-
 <body>
 <div id="map" style="height:600px"></div>
 
 <script>
+
     const urlParams = new URLSearchParams(window.location.search);
-    const apikey = "sk.eyJ1IjoiY2llcnJhamVubiIsImEiOiJjbHV5NmIxMzIwMDBrMmpwMjd2ZXkydXdsIn0.XW2c_saKJO4sVD5OGCymeQ";
+    mapboxgl.accessToken = "sk.eyJ1IjoiY2llcnJhamVubiIsImEiOiJjbHV5NmIxMzIwMDBrMmpwMjd2ZXkydXdsIn0.XW2c_saKJO4sVD5OGCymeQ";
+    const apikey = "AEUxBnDkItZMdx6zMs1LrdeGI0uumtGv";
     const map = new mapboxgl.Map({
         container: 'map',
         style: {
