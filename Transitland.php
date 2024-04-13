@@ -15,7 +15,7 @@
         style: {
             version: 8,
             zoom: 12,
-            center: [-87.628611, 41.860025],
+            center: [44.478339, -73.197576],
             sources: {
                 routes: {
                     type: 'vector',
