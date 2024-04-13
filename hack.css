@@ -1,8 +1,20 @@
 body { margin: 0; padding: 0; }
-#map { position: absolute; top: 25px; bottom: 25px; right: 25px; width: 40%; }
+#map { position: absolute; top: 115px; bottom: 40px; right: 25px; width: 50%; }
+#parag {position: absolute; left: 15px; top: 115px;}
 html{
     margin: 2%;
     font-family: "Cambria", "Georgia", "Times New Roman", serif;
     background-color: rgba(64, 128, 0, 0.75);
     color: rgb(230, 255, 204);
 }
+h1 {text-align:center;}
+h2{color: rgb(64, 128, 0);}
+th,td{
+    border: .1em solid rgb(230, 255, 204);
+    border-collapse: collapse;
+}
+
+th{
+    font-weight: bold;
+}
+.stopsTable{position:absolute; top: 115px;}
