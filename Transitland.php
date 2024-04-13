@@ -1,58 +1,37 @@
 <!DOCTYPE html>
-<html lang="eng">
-    <head>
-        <meta charset="utf-8">
-        <title>Display a map on a webpage</title>
-        <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
-        <link href = "https://api.mapbox.com/mapbox-gl-js/v3.2.0/mapbox-gl.css" rel="stylesheet">
-        <script src = "https://api.mapbox.com/mapbox-gl-js/v3.2.0/mapbox-gl.js"></script>
-        <style>
-            body { margin: 0; padding: 0; }
-            #map { position: absolute; top: 0; bottom: 0; width: 100%; }
-        </style>
-    </head>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Display a map on a webpage</title>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v3.2.0/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v3.2.0/mapbox-gl.js"></script>
+    <style>
+        body { margin: 0; padding: 0; }
+        #map { position: absolute; top: 0; bottom: 0; width: 100%; }
+    </style>
+</head>
 <body>
 <div id="map"></div>
-
 <script>
-    mapboxgl.accessToken = 'sk.eyJ1IjoibGhvbG1lczciLCJhIjoiY2x1eWFhdjdhMHl0OTJrbWpyeDFlMTFkcCJ9.GIdk-6L7b7iCUQg8M2kl7w';
+    // TO MAKE THE MAP APPEAR YOU MUST
+    // ADD YOUR ACCESS TOKEN FROM
+    // https://account.mapbox.com
+    mapboxgl.accessToken = 'pk.eyJ1IjoibGhvbG1lczciLCJhIjoiY2x1eTZleWxhMGIyMTJqcXF2bnFoc3RpMiJ9.CqlWwY6vLoK2ObCB5nR66g';
     const apikey = "AEUxBnDkItZMdx6zMs1LrdeGI0uumtGv";
     const map = new mapboxgl.Map({
-        container: 'map',
-        style: {
-            version: 8,
-            zoom: 12,
-            center: [44.478339, -73.197576],
-            source:{},
-            layers:{},
-            // sources: {
-            //     routes: {
-            //         type: 'vector',
-            //         tiles: [`https://transit.land/api/v2/tiles/routes/tiles/{z}/{x}/{y}.pbf?apikey=${apikey}`],
-            //         maxzoom: 14
-            //     }
-            // },
-            // layers: [{
-            //     id: 'f-chittendoncounty~rt',
-            //     type: 'line',
-            //     source: 'https://api.goswift.ly/real-time/green-mountain/gtfs-rt-vehicle-positions',
-            //     'source-layer': 'https://ridegmt.com/route-1-williston/',
-            //     layout: {
-            //         'line-cap': 'round',
-            //         'line-join': 'round'
-            //     },
-            //     paint: {
-            //         'line-width': 3.0,
-            //         'line-color': '#ff0000'
-            //     }
-            // }]
+        container: 'map', // container ID
+        center: [-73.197576 ,44.478339], // starting position [lng, lat]
+        zoom: 13 // starting zoom
+        sources: {
+            routes: {
+                type: 'tiles',
+                tiles: [`https://transit.land/api/v2/tiles/routes/tiles/{1}/{1}/{1}.pbf?apikey=${apikey}`],
+                maxzoom: 14
+            }
         }
-    })
+    });
 </script>
+
 </body>
-
 </html>
-
-<div>
-    <div id="map" ref="map" style="height:600px" />
-</div>
