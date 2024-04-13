@@ -21,7 +21,7 @@
     const apikey = "AEUxBnDkItZMdx6zMs1LrdeGI0uumtGv";
     const map = new mapboxgl.Map({
         container: 'map', // container ID
-        center: [-73.197576 ,44.478339], // starting position [lng, lat]
+        center: [-73.196252 ,44.47565], // starting position [lng, lat]
         zoom: 13 // starting zoom
         sources: {
             routes: {
