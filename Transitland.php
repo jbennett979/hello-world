@@ -24,10 +24,10 @@
                 }
             },
             layers: [{
-                id: 'routes',
+                id: 'f-chittendoncounty~rt',
                 type: 'line',
-                source: 'routes',
-                'source-layer': 'routes',
+                source: 'https://api.goswift.ly/real-time/green-mountain/gtfs-rt-vehicle-positions',
+                'source-layer': 'https://ridegmt.com/route-1-williston/',
                 layout: {
                     'line-cap': 'round',
                     'line-join': 'round'
